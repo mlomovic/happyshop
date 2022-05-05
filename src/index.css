@@ -1,13 +1,169 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --primary: #2080be;
+  --secondary: #ef7e22;
+  --accents: #bad232;
+  --white: #FFF;
+  --text: #333333;
+  --gray: gray;
+  --font: 16px;
+  --transition: .3s linear;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/*************************
+basic styles
+*************************/
+body {
+  font-size: var(--font);
+  color: var(--text);
+}
+
+.button {
+  background: var(--accents);
+  padding: 10px 30px;
+  text-decoration: none;
+  color: var(--text);
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background: var(--primary);
+  color: var(--white);
+}
+
+a {
+  transition: var(--transition);
+  text-decoration: none;
+}
+
+/*************************
+topbar
+*************************/
+.topbar div {
+  font-size: .9rem;
+}
+
+.topbar a {
+  color: var(--accents);
+}
+
+.topbar a:hover {
+  color: var(--primary);
+}
+
+/*************************
+nav
+*************************/
+nav {
+  border-bottom: 5px solid var(--accents);
+}
+
+.navbar-brand img {
+  width: 80px;
+}
+
+/*************************
+slider
+*************************/
+.carousel-caption {
+  bottom: 15%;
+}
+
+.carousel-item span {
+  color: var(--accents);
+}
+
+.carousel-caption h2 {
+  line-height: 1;
+}
+
+/*************************
+products
+*************************/
+.products h5:last-child {
+  color: var(--accents);
+}
+
+.holder {
+  overflow: hidden;
+}
+
+.holder img {
+  transition: var(--transition)
+}
+
+.holder img:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+.products .col-md-4 {
+  margin-bottom: 20px;
+}
+
+/*************************
+about
+*************************/
+.about i {
+  color: var(--accents);
+  text-shadow: 0 0 1px var(--text);
+  font-size: 2rem;
+}
+
+.about .border-dark {
+  transition: var(--transition);
+}
+
+.about .border-dark:hover {
+  background: var(--text);
+  color: var(--white);
+}
+
+/*************************
+discoverOff
+*************************/
+.discoverOff {
+  background-image: url(img/shop.jpg);
+  height: 60vh;
+  background-position: center top;
+  background-size: cover;
+  border-top: 5px solid var(--accents);
+}
+
+.discoverOff .button:hover {
+  background: var(--secondary);
+}
+
+/*************************
+footer
+*************************/
+footer a {
+  color: var(--accents);
+  font-weight: lighter;
+}
+
+footer a:hover {
+  color: var(--white);
+}
+
+/*************************
+single
+*************************/
+.single .price h5 {
+  color: var(--accents);
+  text-shadow: 0 0 1px var(--text);
+  font-size: 2rem;
+}
+
+/*************************
+R E S P O N S I V E
+*************************/
+@media(max-width: 767px) {
+  .topbar {
+    display: none;
+  }
+
+  .col-md-4,
+  .col-md-3 {
+    margin-bottom: 25px;
+  }
 }
